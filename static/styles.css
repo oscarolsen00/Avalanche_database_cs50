@@ -1,0 +1,12 @@
+body {
+    background-color: green;
+    background-image: url("background2.jpg");
+  }
+
+#fatmap {
+  font-weight: bold;
+}
+
+td {
+  font-weight: bold;
+}

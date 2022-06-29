@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Data
+{% endblock %}
+
+{% block main %}
+{%for row in stats %}
+    <h1> {{ row.location }} </h1>
+    <p> Grade: {{ row.grade }} || Type: {{ row.type }}</p>
+    {%endfor%}
+    <div>
+    <p id = "fatmap">Use FATMAP below to explore the mountains in this region and plan a safe route before you head on your adventure!</p>
+    <iframe width="800" height="400" frameBorder="0" src= {{src}}></iframe>    
+    </div>  
+    {% endblock %}

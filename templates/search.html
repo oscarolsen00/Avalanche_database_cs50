@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Choose your loaction
+{% endblock %}
+
+{% block main %}
+    <h2>Search for your location</h2>
+    <form action="/data" method="post">
+        <div class="mb-3">
+            <select class="form-select mx-auto w-auto" name = "location">
+                <option disabled="" selected="">Location</option>
+                {%for row in locations %}
+                <option value = "{{ row }}">
+                    {{ row }}
+                </option>
+                {%endfor%}
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Search</button>
+    </form>
+{% endblock %}

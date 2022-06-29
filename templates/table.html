@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table class="table tablestriped">
+<thead>
+    <tr>
+        <th class="text-start">Location</th>
+        <th class="text-end">Grade</th>
+        <th class="text-end">Type</th>
+        <th class="text-end">Last Updated</th>
+    </tr>
+</thead>
+                <tbody>
+                {%for row in history %}
+                <tr>
+                <td style="font-weight:bold" class="text-start">{{row.location}}</td>
+                <td style="font-weight:bold" class="text-end">{{row.grade}}</td>
+                <td style="font-weight:bold" class="text-end">{{row.type}}</td>
+                <td style="font-weight:bold" class="text-end">{{row.time}}</td>
+                </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+
+{% endblock %}
